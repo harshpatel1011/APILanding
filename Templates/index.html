@@ -1,0 +1,577 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus API - The Next Gen Data Platform</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="logo-icon"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg>
+                <span>Nexus<strong>API</strong></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#docs">Documentation</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="#" class="btn btn-secondary">Sign In</a>
+                <a href="#" class="btn btn-primary">Get API Key</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <div class="badge">v2.0 is now live — Read the changelog &rarr;</div>
+            <h1 class="hero-title">Build faster with our <br><span class="text-gradient">powerful API infrastructure</span></h1>
+            <p class="hero-subtitle">Integrate real-time data processing, machine learning models, and secure cloud storage into your applications in minutes, not months.</p>
+            <div class="hero-cta">
+                <a href="#" class="btn btn-primary btn-large">Start Building for Free</a>
+                <a href="#" class="btn btn-outline btn-large">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg> Read the Docs
+                </a>
+            </div>
+        </div>
+        
+        <div class="hero-visual">
+            <div class="code-window">
+                <div class="window-header">
+                    <div class="window-dots">
+                        <span></span><span></span><span></span>
+                    </div>
+                    <div class="window-title">bash</div>
+                </div>
+                <div class="window-body">
+<pre><code><span class="token-comment"># Install the Nexus CLI</span>
+<span class="token-keyword">curl</span> -sL https://nexus.api/install.sh <span class="token-operator">|</span> <span class="token-keyword">bash</span>
+
+<span class="token-comment"># Authenticate</span>
+nexus login --token YOUR_API_KEY
+
+<span class="token-comment"># Deploy your first endpoint</span>
+nexus deploy ./main.py --route /api/v1/predict
+
+<span class="token-success">✓ Deployment successful!</span>
+<span class="token-string">https://api.nexus.dev/v1/predict</span></code></pre>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="features" id="features">
+        <div class="section-header">
+            <h2>Everything you need to scale</h2>
+            <p>Designed for developers by developers. We took care of the hard parts.</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg></div>
+                <h3>Ultra-fast Responses</h3>
+                <p>Global edge network ensures sub-50ms latency no matter where your users are located.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="m9 12 2 2 4-4"></path></svg></div>
+                <h3>Enterprise Security</h3>
+                <p>SOC2 compliant with end-to-end encryption, rate limiting, and DDoS protection built-in.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg></div>
+                <h3>SDKs for Everything</h3>
+                <p>Official libraries for Python, Node.js, Go, Rust, Ruby, and Java.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trusted By Section -->
+    <section class="trusted-by">
+        <p class="trusted-text">TRUSTED BY INNOVATIVE TEAMS WORLDWIDE</p>
+        <div class="logo-carousel">
+            <div class="carousel-track">
+                <span>Acme Corp</span>
+                <span>GlobalTech</span>
+                <span>Nova Labs</span>
+                <span>Quantum AI</span>
+                <span>Stark Ind</span>
+                <span>Wayne Ent</span>
+                <!-- Duplicate for infinite scroll effect -->
+                <span>Acme Corp</span>
+                <span>GlobalTech</span>
+                <span>Nova Labs</span>
+                <span>Quantum AI</span>
+                <span>Stark Ind</span>
+                <span>Wayne Ent</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Code Examples Section -->
+    <section class="code-section" id="docs">
+        <div class="code-container">
+            <div class="code-text-content">
+                <h2>Integrate in minutes</h2>
+                <p>Our intuitive SDKs and comprehensive documentation mean you spend less time configuring and more time building your core product.</p>
+                
+                <ul class="integration-features">
+                    <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> Type-safe APIs with comprehensive autocomplete</li>
+                    <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> Built-in retry logic and error handling</li>
+                    <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> Seamless authentication flows</li>
+                </ul>
+                
+                <a href="#" class="btn btn-outline">Explore Full Documentation &rarr;</a>
+            </div>
+            
+            <div class="code-display">
+                <div class="code-tabs">
+                    <button class="tab active">Node.js</button>
+                    <button class="tab">Python</button>
+                    <button class="tab">cURL</button>
+                </div>
+                <div class="window-body">
+<pre><code><span class="token-keyword">import</span> { NexusClient } <span class="token-keyword">from</span> <span class="token-string">'@nexus/api'</span>;
+
+<span class="token-keyword">const</span> client = <span class="token-keyword">new</span> NexusClient({
+  apiKey: process.env.NEXUS_API_KEY,
+  environment: <span class="token-string">'production'</span>
+});
+
+<span class="token-comment">// Process data stream in real-time</span>
+<span class="token-keyword">const</span> response = <span class="token-keyword">await</span> client.data.processStream({
+  sourceId: <span class="token-string">'src_9kx2p1'</span>,
+  pipeline: [<span class="token-string">'clean'</span>, <span class="token-string">'enrich'</span>, <span class="token-string">'analyze'</span>],
+  options: {
+    webhookUrl: <span class="token-string">'https://myapp.com/webhook'</span>
+  }
+});
+
+console.log(`Job started: ${response.jobId}`);</code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <div class="section-header">
+            <h2>Transparent pricing</h2>
+            <p>Start for free, upgrade when you need more power. No hidden fees.</p>
+        </div>
+        
+        <div class="pricing-grid">
+            <!-- Free Plan -->
+            <div class="pricing-card">
+                <div class="plan-name">Hobby</div>
+                <div class="plan-price">$0<span>/mo</span></div>
+                <p class="plan-desc">Perfect for side projects and learning.</p>
+                <ul class="plan-features">
+                    <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> 10,000 API requests / month</li>
+                    <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> 5GB Storage</li>
+                    <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Community Support</li>
+                </ul>
+                <a href="#" class="btn btn-outline btn-block">Get Started</a>
+            </div>
+            
+            <!-- Pro Plan -->
+            <div class="pricing-card popular">
+                <div class="popular-badge">Most Popular</div>
+                <div class="plan-name">Pro</div>
+                <div class="plan-price">$49<span>/mo</span></div>
+                <p class="plan-desc">For growing startups and production apps.</p>
+                <ul class="plan-features">
+                    <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> 1M API requests / month</li>
+                    <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> 50GB Storage</li>
+                    <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Priority Email Support</li>
+                    <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Advanced Analytics</li>
+                </ul>
+                <a href="#" class="btn btn-primary btn-block">Start Free Trial</a>
+            </div>
+            
+            <!-- Enterprise Plan -->
+            <div class="pricing-card">
+                <div class="plan-name">Enterprise</div>
+                <div class="plan-price">Custom</div>
+                <p class="plan-desc">For large scale mission-critical applications.</p>
+                <ul class="plan-features">
+                    <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Unlimited API requests</li>
+                    <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Unlimited Storage</li>
+                    <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> 24/7 Phone Support</li>
+                    <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Custom SLAs & Dedicated Success Manager</li>
+                </ul>
+                <a href="#" class="btn btn-outline btn-block">Contact Sales</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Performance Section -->
+    <section class="performance" id="performance">
+        <div class="section-header">
+            <h2>Built for global scale</h2>
+            <p>Deploy to 35+ regions with a single click. Our anycast network ensures your data is always close to your users.</p>
+        </div>
+        <div class="metrics-grid">
+            <div class="metric-card">
+                <div class="metric-value">45<span>ms</span></div>
+                <div class="metric-label">Global Average Latency</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value">99.99<span>%</span></div>
+                <div class="metric-label">Guaranteed Uptime</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value">10<span>B+</span></div>
+                <div class="metric-label">Requests Handled Daily</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value">0<span>ms</span></div>
+                <div class="metric-label">Cold Starts</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases Section -->
+    <section class="use-cases" id="solutions">
+        <div class="use-cases-container">
+            <div class="use-cases-text">
+                <h2>Solutions for every industry</h2>
+                <p>Whether you're building the next massive social network or a secure financial application, Nexus API adapts to your requirements.</p>
+                <div class="use-case-list">
+                    <div class="use-case-item active">
+                        <h4>FinTech & Banking</h4>
+                        <p>Real-time ledger updates and strict SOC2 compliance.</p>
+                    </div>
+                    <div class="use-case-item">
+                        <h4>E-commerce</h4>
+                        <p>Handle massive traffic spikes during flash sales without breaking a sweat.</p>
+                    </div>
+                    <div class="use-case-item">
+                        <h4>AI & Machine Learning</h4>
+                        <p>Stream massive datasets directly into your models with zero latency.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="use-case-visual">
+                <div class="glass-panel">
+                    <div class="pulse-ring"></div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="panel-icon"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                    <h3>Financial Data Stream Active</h3>
+                    <p class="status-text"><span class="dot green"></span> Connected to 4 exchanges</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="section-header">
+            <h2>Loved by developers</h2>
+            <p>Don't just take our word for it. Here's what engineering teams are saying.</p>
+        </div>
+        <div class="testimonial-grid">
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p>"Migrating to Nexus cut our infrastructure costs in half and improved our latency by 200%. The developer experience is unmatched."</p>
+                <div class="author">
+                    <div class="avatar" style="background: linear-gradient(135deg, #a78bfa, #8b5cf6);"></div>
+                    <div>
+                        <strong>Sarah Jenkins</strong>
+                        <span>CTO at FinEdge</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p>"The documentation is absolutely gorgeous. We were able to integrate the streaming API into our React Native app in under two hours."</p>
+                <div class="author">
+                    <div class="avatar" style="background: linear-gradient(135deg, #60a5fa, #3b82f6);"></div>
+                    <div>
+                        <strong>Marcus Chen</strong>
+                        <span>Lead Mobile Dev</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p>"I've used AWS, GCP, and Azure. Nexus abstracts away all the painful parts of cloud architecture while keeping the performance."</p>
+                <div class="author">
+                    <div class="avatar" style="background: linear-gradient(135deg, #34d399, #10b981);"></div>
+                    <div>
+                        <strong>Elena Rodriguez</strong>
+                        <span>Systems Architect</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature Deep Dives Section -->
+    <section class="feature-deep-dives">
+        <div class="deep-dive-row">
+            <div class="deep-dive-content">
+                <div class="subtitle-badge">Edge Compute</div>
+                <h2>Run your code closer to your users</h2>
+                <p>Nexus Functions allow you to deploy serverless code directly to our edge network across 35+ global regions. This guarantees sub-50ms execution times and eliminates cold starts entirely.</p>
+                <ul class="check-list">
+                    <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Zero cold starts</li>
+                    <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Supports Node.js, Python, and Go</li>
+                    <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Automatic scaling</li>
+                </ul>
+            </div>
+            <div class="deep-dive-visual">
+                <div class="map-illustration">
+                    <svg viewBox="0 0 800 400" fill="none" xmlns="http://www.w3.org/2000/svg" class="world-map">
+                        <path d="M150 120 Q 200 100 250 150 T 400 100 T 600 200" stroke="rgba(139, 92, 246, 0.3)" stroke-width="2" stroke-dasharray="5,5" />
+                        <circle cx="150" cy="120" r="6" fill="#8b5cf6" />
+                        <circle cx="250" cy="150" r="4" fill="#3b82f6" />
+                        <circle cx="400" cy="100" r="8" fill="#8b5cf6" />
+                        <circle cx="600" cy="200" r="5" fill="#3b82f6" />
+                        <circle cx="150" cy="120" r="16" fill="rgba(139, 92, 246, 0.2)" class="ping" />
+                        <circle cx="400" cy="100" r="24" fill="rgba(139, 92, 246, 0.2)" class="ping" style="animation-delay: 1s;" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <div class="deep-dive-row reverse">
+            <div class="deep-dive-content">
+                <div class="subtitle-badge">Vector Database</div>
+                <h2>Native AI integration out of the box</h2>
+                <p>Store, index, and query billions of high-dimensional vectors with millisecond latency. Build RAG applications, recommendation engines, and semantic search without setting up separate infrastructure.</p>
+                <ul class="check-list">
+                    <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> HNSW indexing for rapid retrieval</li>
+                    <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Hybrid search capabilities</li>
+                    <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Seamless LangChain integration</li>
+                </ul>
+            </div>
+            <div class="deep-dive-visual">
+                <div class="data-cube">
+                    <div class="layer layer-1"></div>
+                    <div class="layer layer-2"></div>
+                    <div class="layer layer-3"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest Resources Section -->
+    <section class="resources">
+        <div class="section-header">
+            <h2>Learn and explore</h2>
+            <p>Dive into our latest tutorials, engineering blogs, and release notes.</p>
+        </div>
+        <div class="resources-grid">
+            <a href="#" class="resource-card">
+                <div class="resource-image" style="background: linear-gradient(45deg, #1e1e2d, #2d2d44);"></div>
+                <div class="resource-content">
+                    <span class="resource-tag">Tutorial</span>
+                    <h3>Building a real-time chat app with Nexus Streams</h3>
+                    <p>Learn how to use WebSockets and our Edge network to build a scalable chat application.</p>
+                </div>
+            </a>
+            <a href="#" class="resource-card">
+                <div class="resource-image" style="background: linear-gradient(45deg, #1e293b, #0f172a);"></div>
+                <div class="resource-content">
+                    <span class="resource-tag">Engineering</span>
+                    <h3>How we achieved sub-10ms global replication</h3>
+                    <p>A deep dive into the architecture behind our multi-region distributed database.</p>
+                </div>
+            </a>
+            <a href="#" class="resource-card">
+                <div class="resource-image" style="background: linear-gradient(45deg, #311e3b, #4a2d59);"></div>
+                <div class="resource-content">
+                    <span class="resource-tag">Release</span>
+                    <h3>Nexus API v2.0: Vector Search, Webhooks, and more</h3>
+                    <p>Read about the massive new features included in our latest major release.</p>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Community Banner -->
+    <section class="community-banner">
+        <div class="community-content">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="discord-icon"><path d="M19 5.867c-1.332-.6-2.76-1.03-4.253-1.267-.286.516-.596 1.156-.81 1.705-1.57-.234-3.136-.234-4.66 0-.214-.549-.533-1.19-.823-1.705-1.494.238-2.923.666-4.254 1.267C1.41 12.35 1.056 18.675 1.484 21c1.785 1.314 3.513 2.112 5.21 2.637.426-.582.812-1.19 1.154-1.826-.59-.224-1.156-.496-1.696-.81 1.43-1.026 2.766-2.175 3.99-3.418 1.458.177 2.924.177 4.38 0 1.224 1.243 2.56 2.392 3.99 3.418-.54.314-1.106.586-1.696.81.342.636.728 1.244 1.154 1.826 1.697-.525 3.425-1.323 5.21-2.637.52-2.827-.193-8.85-2.68-15.133zM8.56 16.273c-1.127 0-2.053-.997-2.053-2.227s.91-2.227 2.053-2.227c1.15 0 2.076.997 2.053 2.227 0 1.23-.903 2.227-2.053 2.227zm6.88 0c-1.127 0-2.053-.997-2.053-2.227s.91-2.227 2.053-2.227c1.15 0 2.076.997 2.053 2.227 0 1.23-.91 2.227-2.053 2.227z"></path></svg>
+            <div class="community-text">
+                <h2>Join our developer community</h2>
+                <p>Connect with 100,000+ developers, get help from our core team, and showcase your projects.</p>
+            </div>
+            <a href="#" class="btn btn-secondary" style="background: white; color: #5865F2;">Join Discord</a>
+        </div>
+    </section>
+
+    <!-- Security Section -->
+    <section class="security-compliance">
+        <div class="security-content">
+            <h2>Bank-grade security by default</h2>
+            <p>Your data is encrypted at rest and in transit. We undergo regular penetration testing and maintain the highest industry compliance standards.</p>
+            <div class="compliance-badges">
+                <div class="badge-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="badge-icon"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                    <span>SOC 2 Type II</span>
+                </div>
+                <div class="badge-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="badge-icon"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                    <span>HIPAA Compliant</span>
+                </div>
+                <div class="badge-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="badge-icon"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                    <span>GDPR Ready</span>
+                </div>
+                <div class="badge-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="badge-icon"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                    <span>ISO 27001</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Integrations Ecosystem -->
+    <section class="integrations">
+        <div class="section-header">
+            <h2>Plays well with others</h2>
+            <p>Nexus API integrates seamlessly into your existing modern data stack and deployment pipelines.</p>
+        </div>
+        <div class="integrations-grid">
+            <div class="integration-item">DataDog</div>
+            <div class="integration-item">Snowflake</div>
+            <div class="integration-item">Vercel</div>
+            <div class="integration-item">AWS</div>
+            <div class="integration-item">Google Cloud</div>
+            <div class="integration-item">Azure</div>
+            <div class="integration-item">Kafka</div>
+            <div class="integration-item">Grafana</div>
+            <div class="integration-item">Terraform</div>
+            <div class="integration-item">GitHub Actions</div>
+            <div class="integration-item">Slack</div>
+            <div class="integration-item">PagerDuty</div>
+        </div>
+    </section>
+
+    <!-- Roadmap / Timeline Section -->
+    <section class="roadmap">
+        <div class="section-header">
+            <h2>Product Roadmap</h2>
+            <p>We ship fast. Here is what we've recently delivered and what is coming next.</p>
+        </div>
+        <div class="timeline">
+            <div class="timeline-item done">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <span class="timeline-date">Q1 2026</span>
+                    <h3>Vector Database GA</h3>
+                    <p>Native integration of our HNSW vector search into the main platform, enabling instant AI application development.</p>
+                </div>
+            </div>
+            <div class="timeline-item done">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <span class="timeline-date">Q2 2026</span>
+                    <h3>Edge Functions</h3>
+                    <p>Serverless compute pushed to 35+ regions worldwide, achieving zero cold start latency for Python and Node.js.</p>
+                </div>
+            </div>
+            <div class="timeline-item current">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <span class="timeline-date">Q3 2026 (Current)</span>
+                    <h3>Real-time Webhooks & Streams</h3>
+                    <p>Introducing massive enhancements to our WebSocket architecture for bi-directional event streaming.</p>
+                </div>
+            </div>
+            <div class="timeline-item upcoming">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <span class="timeline-date">Q4 2026</span>
+                    <h3>Enterprise On-Premise</h3>
+                    <p>Deploy Nexus API completely within your own VPC or on bare metal for absolute data sovereignty.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="newsletter-box">
+            <div class="newsletter-text">
+                <h2>Stay in the loop</h2>
+                <p>Get a monthly summary of our newest features, API updates, and engineering deep-dives. No spam, ever.</p>
+            </div>
+            <form class="newsletter-form" onsubmit="event.preventDefault();">
+                <input type="email" placeholder="Enter your work email" required>
+                <button type="submit" class="btn btn-primary">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="section-header">
+            <h2>Frequently Asked Questions</h2>
+        </div>
+        <div class="faq-list">
+            <div class="faq-item">
+                <h4>How difficult is it to migrate from another provider?</h4>
+                <p>We provide automated migration scripts for major competitors, making the switch take hours instead of weeks. Our support team is also available to assist with complex setups.</p>
+            </div>
+            <div class="faq-item">
+                <h4>Do you offer SLAs for uptime?</h4>
+                <p>Yes, all Pro plans include a 99.9% uptime SLA, and Enterprise plans offer 99.99% with financial backing.</p>
+            </div>
+            <div class="faq-item">
+                <h4>Can I self-host Nexus API?</h4>
+                <p>Currently Nexus is a fully managed cloud solution. We are evaluating an enterprise on-premise offering for Q4 2026. Contact our sales team for early access.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bottom CTA -->
+    <section class="bottom-cta">
+        <div class="cta-content">
+            <h2>Ready to transform your workflow?</h2>
+            <p>Join thousands of developers building the future with Nexus API.</p>
+            <div class="cta-buttons">
+                <a href="#" class="btn btn-primary btn-large">Create Free Account</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="logo">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="logo-icon"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg>
+                    <span>Nexus<strong>API</strong></span>
+                </div>
+                <p>&copy; 2026 Nexus Inc. All rights reserved.</p>
+            </div>
+            <div class="footer-links">
+                <div class="link-group">
+                    <h4>Product</h4>
+                    <a href="#">Features</a>
+                    <a href="#">Pricing</a>
+                    <a href="#">Changelog</a>
+                </div>
+                <div class="link-group">
+                    <h4>Developers</h4>
+                    <a href="#">Documentation</a>
+                    <a href="#">API Reference</a>
+                    <a href="#">Status</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+</html>
